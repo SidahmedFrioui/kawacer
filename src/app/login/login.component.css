@@ -1,0 +1,45 @@
+.login {
+  background: white;
+  margin: 2em;
+  text-align: center;
+}
+
+.header {
+  background: #34c0cb;
+  color: white;
+  padding: 3em 1em;
+}
+
+.in {
+  margin: 1em;
+}
+
+input {
+  border-radius: 0;
+  color: #A09F9F;
+  border-color: #A09F9F;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+.icon {
+  color: #A09F9F;
+}
+
+input::placeholder {
+  color: #A09F9F;
+}
+
+.head {
+  font-size: 2em !important;
+}
+
+.is-success {
+  background: #5053a4;
+  border-radius: 0;
+  padding: 2em;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+.is-success:hover {
+  background: #5053a4;
+}

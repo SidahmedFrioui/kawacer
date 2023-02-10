@@ -1,0 +1,48 @@
+.main {
+  background: url("../assets/Asset.svg") no-repeat fixed;
+  background-size: cover;
+}
+.active {
+  border-bottom: 2px solid #5053a4;
+}
+.navbar {
+  background: #171b32;
+}
+
+.navbar-item{
+  color: white;
+  margin: 0 4em;
+  background: transparent !important;
+}
+.navbar-item:hover {
+  color: #5053a4;
+}
+
+.is-primary {
+  background: #5053a4;
+}
+
+.is-primary:hover {
+  background: #5053a4;
+}
+
+.is-light {
+  background: transparent;
+  color: #74B69B;
+  border: 1px solid #74B69B;
+}
+
+.is-light:hover {
+  background: #74B69B;
+  color: white;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid #5053a4;
+}
+
+.outline:hover {
+  background: #5053a4;
+}
+

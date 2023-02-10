@@ -1,0 +1,33 @@
+<div class="columns">
+    <div class="column" style="background-color: #292c48;text-align: right;margin: 0 1em;">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="column is-one-quarter is-fixed-top" style="background-color: #292c48;text-align: right;">
+        <aside class="menu">
+            <p class="menu-label">
+              عام
+            </p>
+            <ul class="menu-list">
+              <li><a routerLinkActive="active" routerLink="/dashboard/main">لوحة التحكم&nbsp;<i class="fas fa-chart-line"></i></a></li>
+            </ul>
+            <p class="menu-label">
+              إدارة الموقع
+            </p>
+            <ul class="menu-list">
+              <li><a routerLinkActive="active" routerLink="/dashboard/messages" class="is-dark">الرسائل&nbsp;<i class="fas fa-envelope"></i></a></li>
+              <li><a routerLinkActive="active" routerLink="/dashboard/quizes">كويزات&nbsp;<i class="fas fa-question-circle"></i></a></li>
+              <li><a routerLinkActive="active" routerLink="/dashboard/users">المستخدمين&nbsp;<i class="fas fa-users"></i></a></li>
+              <li><a routerLinkActive="active" routerLink="/dashboard/categories">الأصناف&nbsp;<i class="fas fa-layer-group"></i></a></li>
+            </ul>
+            <p class="menu-label">
+                إعدادات أخرى
+            </p>
+            <ul class="menu-list">
+                <li><a routerLinkActive="active" routerLink="/dashboard/admin">المستخدم&nbsp;<i class="fas fa-user"></i></a></li>
+            </ul>
+            <ul class="menu-list">
+                <li><a (click)="logout()">خروج&nbsp;<i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+          </aside>
+    </div>
+</div>

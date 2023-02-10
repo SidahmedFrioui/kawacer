@@ -1,0 +1,39 @@
+<title>لوحة التحكم | كويزات</title>
+<div>
+    <a href="" class="button is-success" style="margin: 1em 0;">إضافة كويز&nbsp;<i class="fas fa-plus"></i></a>
+    &nbsp;<a routerLink="/dashboard/quizes" class="button is-link" style="margin: 1em 0;">تحديث القائمة&nbsp;<i class="fas fa-sync-alt"></i></a>
+    <table class="table is-fullwidth" style="text-align: right !important;padding: 0 !important;">
+      <thead>
+        <tr>
+          <th>ادوات التحكم</th>
+          <th>الأسئلة</th>
+          <th>الموضوع</th>
+          <th>الإسم</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let quiz of quizList">
+              <td><div class="field is-grouped">
+                  <p class="control">
+                    <button class="button is-danger">
+                      حذف&nbsp;<i class="fas fa-trash"></i>
+                    </button>
+                  </p>
+                  <p class="control">
+                    <a routerLink="/dashboard/questions/{{quiz._id}}" class="button">
+                      الأسئلة&nbsp;<i class="fas fa-question-circle"></i>
+                    </a>
+                  </p>
+                  <p class="control">
+                    <button class="button is-link">
+                      تعديل&nbsp;<i class="fas fa-pen"></i>
+                    </button>
+                  </p>
+                </div></td>
+              <td></td>
+              <td>{{quiz.category}}</td>
+              <td>{{quiz.name}}</td>
+          </tr>
+      </tbody>
+    </table>
+</div>

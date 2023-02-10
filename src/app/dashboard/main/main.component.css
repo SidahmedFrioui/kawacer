@@ -1,0 +1,12 @@
+p, li a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+li a:hover {
+    color: #2d3436 !important;
+}
+
+.active {
+    background-color: #5053a4;
+}

@@ -1,0 +1,24 @@
+<title>كواسر | كويز&nbsp;{{quizData.name}}</title>
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+        <div class="card">
+          <div class="card-content">
+            <div class="media" style="text-align: center">
+              <div class="media-content">
+                  <img src={{quizData.picture}} alt="Placeholder image" style="width: 50%;">
+                <p class="title">{{quizData.name}}</p>
+              </div>
+            </div>
+    
+            <div class="content">
+              <p class="text">الموضوع :&nbsp;{{quizData.category}}</p>
+              <p class="text">عدد الأسئلة :&nbsp;{{questions.length}}</p>
+              <button class="button is-fullwidth is-primary" (click)="startQuiz()">إبدأ الكويز&nbsp;&nbsp;<i class="fas fa-play"></i></button>
+            </div>
+          </div>
+    </div>
+    
+  </div>
+  <button (click)="close()" class="modal-close is-large" aria-label="close"></button>
+</div>

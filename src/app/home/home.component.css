@@ -1,0 +1,51 @@
+.back {
+  background: #292c48;
+  padding: 1em;
+}
+.card-link {
+  text-decoration: none !important;
+}
+.card {
+  text-align: center;
+}
+
+.card p {
+  font-size: 18px !important;
+}
+
+.colm {
+  background: #292c48;
+  margin: 1em;
+  padding: auto;
+}
+.is-primary {
+  background: #5053a4;
+  padding: 1em !important;
+  border-radius: 0;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+.is-primary:hover {
+  background: #5053a4 !important;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid #5053a4;
+}
+
+input {
+  background: transparent;
+  border-radius: 0;
+  border-color: #A09F9F;
+  color: white;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+input::placeholder {
+  color: #A09F9F;
+}
+
+.outline:hover {
+  background: #5053a4;
+}

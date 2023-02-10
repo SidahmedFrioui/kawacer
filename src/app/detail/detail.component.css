@@ -1,0 +1,23 @@
+.modal-content, .card-content {
+  padding: 0 !important;
+  text-align: right;
+}
+
+.title {
+  margin: 1em !important
+}
+
+.text {
+  margin: 1em !important;
+}
+
+.is-primary {
+  background: #5053a4;
+  padding: 2em !important;
+  border-radius: 0;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+.is-primary:hover {
+  background: #5053a4 !important;
+}

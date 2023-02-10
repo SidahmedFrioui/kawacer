@@ -1,0 +1,31 @@
+<title>لوحة التحكم | الأصناف</title>
+
+<div>
+    <a href="" class="button is-success" style="margin: 1em 0;">إضافة صنف جديد&nbsp;<i class="fas fa-plus"></i></a>
+      &nbsp;<a routerLink="/dashboard/quizes" class="button is-link" style="margin: 1em 0;">تحديث القائمة&nbsp;<i class="fas fa-sync-alt"></i></a>
+    <table class="table is-fullwidth" style="text-align: right !important;padding: 0 !important;">
+      <thead>
+        <tr>
+          <th>ادوات التحكم</th>
+          <th>الإسم</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let category of categoriesList">
+              <td><div class="field is-grouped">
+                  <p class="control">
+                    <button class="button is-danger is-fullwidth">
+                      حذف&nbsp;<i class="fas fa-trash"></i>
+                    </button>
+                  </p>
+                  <p class="control">
+                    <button class="button is-link is-fullwidth">
+                      تعديل&nbsp;<i class="fas fa-pen"></i>
+                    </button>
+                  </p>
+                </div></td>
+              <td>{{category.name}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>

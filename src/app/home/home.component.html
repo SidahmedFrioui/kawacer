@@ -1,0 +1,104 @@
+<!--div class="home" style="margin-top: 4.3em;">
+    <div class="row">
+        <div class="col col-md-3 sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/"><i class="fas fa-home"></i>&nbsp; الصفحة الرئيسية</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-map"></i>&nbsp; إستكشاف</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-book"></i>&nbsp; المكتبة</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row" style="overflow-y: scroll !important;">
+          <div class="col main-content">
+            <h1 style="margin: 0em .5em">كويزات جديدة</h1>
+            <div class="card-deck" style="margin: 1em 0;">
+              <div *ngFor="let quiz of quizList" class="card" style="width: 18rem;">
+                <img src={{quiz.picture}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text"><a routerLink="/quizes/{{quiz._id}}">{{quiz.name}}</a></p>
+                </div>
+              </div>
+            </div>
+            <h1 style="margin: 0em .5em">كويزات للضيوف</h1>
+            <div class="card-deck" style="margin: 1em 0;">
+              <div *ngFor="let quiz of quizList" class="card" style="width: 18rem;">
+                <img src={{quiz.picture}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text"><a routerLink="/quizes/{{quiz._id}}">{{quiz.name}}</a></p>
+                </div>
+              </div>
+            </div>
+            <h1 style="margin: 0em .5em">كويزات للمنخرطين</h1>
+            <div class="card-deck" style="margin: 1em 0;">
+              <div *ngFor="let quiz of quizList" class="card" style="width: 18rem;">
+                <img src={{quiz.picture}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text"><a routerLink="/quizes/{{quiz._id}}">{{quiz.name}}</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div-->
+<title>كواسر | الصفحة الرئيسية</title>
+<div class="columns">
+  <div class="column colm is-one-quarter">
+    <div class="field is-grouped" style="text-align: center">
+      <p class="control">
+        <button (click)="getPaid()" class="button is-fullwidth is-primary">
+          للمنخرطين
+          &nbsp;<i class="fas fa-lock"></i>
+        </button>
+      </p>
+      <p class="control">
+        <button (click)="getFree()" class="button is-fullwidth is-primary outline">
+          للضيوف
+          &nbsp;<i class="fas fa-users"></i>
+        </button>
+      </p>
+    </div>
+  </div>
+  <div class="column colm">
+    <div class="field is-grouped">
+      <p class="control">
+        <button (click)="submit()" class="button is-primary">
+          بحث
+        </button>
+      </p>
+      <p class="control is-expanded has-icons-right">
+        <input name="searchQuery" [(ngModel)]="searchQuery" style="text-align: right" class="input" type="text" placeholder="إبحث عن أحد الدروس">
+        <span class="icon is-small is-right">
+          <i class="fas fa-search"></i>
+        </span>
+      </p>
+
+    </div>
+  </div>
+</div>
+<div class="columns back is-multiline">
+  <div style="text-align: right !important;">
+    <h3 style="color: white;">{{isEmpty}}</h3>
+  </div>
+  <div class="column is-3" *ngFor="let quiz of quizList">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1">
+          <img src={{quiz.picture}} alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <a class="card-link" href="" routerLink="/quizes/{{quiz._id}}"><p class="title is-4">{{quiz.name}}</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

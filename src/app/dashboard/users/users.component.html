@@ -1,0 +1,39 @@
+<title>لوحة التحكم | المستخدمين</title>
+<div>
+    <a href="" class="button is-success" style="margin: 1em 0;">إضافة مستخدم جديد&nbsp;<i class="fas fa-plus"></i></a>
+    &nbsp;<a routerLink="/dashboard/quizes" class="button is-link" style="margin: 1em 0;">تحديث القائمة&nbsp;<i class="fas fa-sync-alt"></i></a>
+    <table class="table is-fullwidth" style="text-align: right !important;padding: 0 !important;">
+      <thead>
+        <tr>
+          <th>ادوات التحكم</th>
+          <th>البلدية</th>
+          <th>الولاية</th>
+          <th>النوع</th>
+          <th>البريد الإلكتروني</th>
+          <th>الإسم</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let user of userList">
+              <td><div class="field is-grouped">
+                  <p class="control">
+                    <button class="button is-danger">
+                      حذف&nbsp;<i class="fas fa-trash"></i>
+                    </button>
+                  </p>
+                  <p class="control">
+                    <button class="button is-link">
+                      تعديل&nbsp;<i class="fas fa-pen"></i>
+                    </button>
+                  </p>
+                </div>
+            </td>
+            <td>{{user.state}}</td>
+            <td>{{user.city}}</td>
+            <td>{{user.type}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.first_name}} {{user.second_name}}</td>
+          </tr>
+      </tbody>
+    </table>
+</div>

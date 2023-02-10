@@ -1,0 +1,19 @@
+
+tr {
+    border: none !important;
+    background-color: #292c48;
+}
+
+td {
+    border: none !important;
+    color: white !important;
+}
+
+th {
+    border-bottom: 1px solid #171b32;
+    color: #5053a4 !important;
+}
+
+tr:nth-child(2n) {
+    background-color: #171b32 !important;
+}

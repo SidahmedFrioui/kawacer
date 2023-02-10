@@ -1,0 +1,81 @@
+<!--div-- class="login">
+    <form class="clearfix">
+        <div class="form-group">
+          <input name="email" type="email" [(ngModel)]="loginData.email" placeholder="عنوان البريد الإلكتروني" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <input name="password" type="password" [(ngModel)]="loginData.password" placeholder="كلمة السر" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div style="float: left;text-align: right;" class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">&nbsp;&nbsp;&nbsp;&nbsp;
+            <label class="form-check-label" for="exampleCheck1">تدكر كلمة المرور</label>
+         </div>
+        <button style="float: right" type="button" (click)="login()" class="btn btn-primary">تسجيل الدخول &nbsp;<i class="fas fa-sign-in-alt"></i></button>
+      </form>
+</div-->
+<!--div class="login">
+  <form (ngSubmit)="submit()" class="clearfix">
+    <div *ngIf="error" class="alert alert-danger" role="alert">
+      <h6><i class="fas fa-exclamation-triangle"></i>&nbsp;&nbsp;إسم المستخدم أو كلمة السر خاطئة</h6>
+    </div>
+    <div class="form-group">
+      <input type="text" name="username" placeholder="إسم المستخدم" class="form-control" [(ngModel)]="username" />
+    </div>
+    <div class="form-group">
+      <input type="password" name="password" placeholder="كلمة المرور" class="form-control" [(ngModel)]="password" />
+    </div>
+    <div style="float: left;text-align: right;" class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">&nbsp;&nbsp;&nbsp;&nbsp;
+      <label class="form-check-label" for="exampleCheck1">تدكر كلمة المرور</label>
+    </div>
+    <div style="float: right" class="form-group">
+      <button class="btn btn-primary" type="submit">تسجيل الدخول&nbsp;<i class="fas fa-sign-in-alt"></i></button>
+    </div>
+  </form>
+</div-->
+<title>كواسر | تسجيل الدخول</title>
+<div class="container ">
+  <div class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="column">
+        <form class="login" (ngSubmit)="submit()" novalidate>
+          <div class="field header">
+            <i class="head fas fa-user"></i>
+          </div>
+          <div>
+            <h4 style="border-bottom: 1px solid #A09F9F;margin: 1em 5em;padding: 1em;color: #000000;font-weight: bold">تسجيل الدخول</h4>
+          </div>
+          <div class="field in">
+            <div *ngIf="error" class="notification is-danger" style="text-align: right;">
+              {{error}}&nbsp;&nbsp;<i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" name="username" [(ngModel)]="username" type="email" placeholder="البريد الإلكتروني" style="text-align: right !important;" required>
+              <span class="icon is-small is-right">
+      <i class="fas fa-envelope"></i>
+    </span>
+            </p>
+          </div>
+          <div class="field in">
+            <p class="control has-icons-right">
+              <input class="input" name="password" [(ngModel)]="password" type="password" placeholder="كلمة السر" style="text-align: right !important;" required>
+              <span class="icon is-small is-right">
+      <i class="fas fa-lock"></i>
+    </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <button type="submit" class="button is-success is-fullwidth">
+                الدخول &nbsp;<i class="fas fa-sign-in-alt"></i>
+              </button>
+            </p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <button (click)="close()" class="modal-close is-large" aria-label="close"></button>
+  </div>
+</div>

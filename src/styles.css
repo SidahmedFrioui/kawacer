@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #171b32 !important;
+  font-family: 'Cairo', sans-serif !important;
+  overflow-x: hidden !important;
+}
